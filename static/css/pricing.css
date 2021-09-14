@@ -1,0 +1,155 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  background: url(../imgs/Path\ -7\ \(1\).png) no-repeat top left;
+  background-size: 100%;
+  background-color: #000000;
+}
+
+.mainHeading {
+  text-align: center;
+  font-size: 50px;
+}
+.switchBtn {
+  outline: none;
+  background: transparent;
+  border: none;
+  width: 50%;
+  height: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.forGroup{
+  background: url(../imgs/Group\ 224.svg) no-repeat left top;
+  background-position-x: -10%;
+}
+.mainHeadingDiv{
+  margin-top: 10%;
+  margin-bottom: 10%;
+  background: url(../imgs/Path\ 3.svg) no-repeat right top;
+  background-size: 40%;
+  height: 300px;
+}
+.monthlyYearlyButton {
+  width: 20%;
+  border: 2px solid #fc8c03;
+  border-radius: 20px;
+  padding: 4px;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.active,
+.switchBtn:hover {
+  background-color: #fc8c03;
+  border-radius: 2px solid #fc8c03;
+  border-radius: 15px;
+  color: white;
+
+  cursor: pointer;
+}
+.planCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 50px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #fad2d5;
+  border-radius: 20px;
+  padding: 25px;
+  width: 18em;
+}
+.cardHeading {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin: 7px;
+}
+.cardButton {
+  background-color: #fc8c03;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 50px;
+  margin: 10px;
+}
+.dashBordSingInButton {
+  width: 100px;
+  background-color: #fc8c03;
+  border: 2px solid #fc8c03;
+  border-radius: 20px;
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+  font-size: large;
+  cursor: pointer;
+}
+.footer {
+  background-color: black;
+  color: white;
+  margin-top: 50px;
+  width: 100%;
+  padding: 50px;
+}
+.footerTop {
+  display: flex;
+  justify-content: space-around;
+}
+.aboutUs {
+  width: 25%;
+}
+.contactUs {
+  width: 25%;
+}
+.connectWithUs {
+  width: 30%;
+}
+.icons {
+  display: flex;
+}
+.icon {
+  margin: 10px;
+}
+.copyRight {
+  text-align: center;
+}
+.footerBottom {
+  margin-top: 50px;
+}
+.footerBottomUnder {
+  color: #fc8c03;
+  display: flex;
+  width: 400px;
+  justify-content: space-around;
+  margin: auto;
+}
+.strikethrough {
+  position: relative;
+}
+.strikethrough:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 1px solid;
+  border-color: inherit;
+  
+  -webkit-transform:rotate(-5deg);
+  -moz-transform:rotate(-5deg);
+  -ms-transform:rotate(-5deg);
+  -o-transform:rotate(-5deg);
+  transform:rotate(-5deg);
+}

@@ -1,0 +1,95 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: bold !important;
+
+}.bootNav {
+  background: transparent !important;
+  padding: 7%;
+  padding-top: 2% !important;
+  padding-bottom: 2% !important;
+  width: 100% !important;
+}
+.backgroundImgPath7{
+  background: url(../imgs/Path\ -7\ \(1\).png) no-repeat right top; 
+  background-size: 10%;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+.mainHeading{
+  text-align: center;
+}
+
+.middleDiv1{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left: 60px;
+  margin-top: 2%;
+  padding: 5%;
+  background: url(../imgs/Group\ 224.svg) no-repeat top left;
+}
+.middleDiv2{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left: 60px;
+  margin-top: 2%;
+  padding: 5%;
+  background: url(../imgs/Path\ 1.svg) no-repeat top left;
+  background-size: 30%;
+  background-position-x: -17%;
+}
+.middleDiv{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left: 60px;
+  margin-top: 2%;
+  padding: 5%;
+}
+.left{
+background: url(../imgs/Ellipse\ -2.svg) no-repeat center left ;
+}
+.right{
+background: url(../imgs/Path\ 1.svg) no-repeat bottom right;
+background-size: 60%;
+}
+.form{
+  margin: auto;
+  width: 350px;
+  border: 2px solid #fc8c03;
+  border-radius: 20px;
+  padding: 25px;
+  background-color: #f5d7d5;
+}
+.formElement{
+  width: 95%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #dfd7e0;
+  border-radius: 10px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin: 7px;
+}
+.underHeading{
+  font-size:larger;
+}
+.formButton{
+  background-color: #fc8c03;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: auto;
+}

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+{% load static %}
+    <link rel="stylesheet" href="{% static '/css/claimReimbursement.css' %}">
+</head>
+
+<body>
+    {% include 'nav.html' %}
+    <div class="firstBackGround">
+        <div class="container-fluid upperDiv" style="padding: 5% 10% 10% 10%; display: flex; flex-wrap: wrap;">
+            <div class="left">
+                <p class="heading"><b>Health Insurance <br> Claim Reimbursement</b></p>
+                <p class="subHeading">Fully automated, hassle free and <br> maximum claim settlement</p>
+            </div>
+            <div class="Right">
+                <img class="img-fluid" src="../static/imgs/4412.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="middleDiv container-fluid " >
+        <div class="container">
+            <img src="../static/imgs/croped.png" class="img-fluid imgDiv" alt="" srcset="">
+        </div>
+        <!-- <button class="btn"  onclick="window.location.href=`https://www.apple.com/in/app-store/`">Button</button>
+        <button class="btnTwo" onclick="window.location.href=`https://www.apple.com/in/app-store/`">Button</button> -->
+    </div>
+    <div class="bottomDiv imgPath7" style="padding: 10% 10% 10% 10%;">
+        <p class="Subheading text-center">Why choose us <img src="../static/imgs/QuestionsMark.svg" style="width: 35vh;" alt="">
+        </p>
+        <div class="underBottomDiv " style="display: flex; flex-wrap: wrap;">
+            <div class="left">
+                <ol class="subHeading">
+                    <li>
+                        <span class="boldOrange">Easy</span> claim submission through bimaxpress platform
+                    </li>
+                    <li>
+                        Document pick up and courier service
+                    </li>
+                    <li>
+                        Experts assistance
+                    </li>
+                    <li>
+                        <span class="boldOrange">Maximum</span> claim settlement
+                    </li>
+                    <li>
+                        Easy tracking
+                    </li>
+                </ol>
+                <p class="subHeading">
+                    <span class="boldOrange">Bimaxpress</span> is focused on building solution through India's
+                    industries first app which helps one in
+                    filing their health insurance claim in easy steps. <br>
+                    Bimaxpress is prominent to help their customers in filing health insurance claims from the comfort
+                    of their home.
+                </p>
+            </div>
+            <div class="Right">
+                <img class="img-fluid" src="../static/imgs/Mobile_With_Man.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="BottomBottom">
+        <div class="Elipse-1">
+
+        </div>
+        <div class="Elipse-1">
+
+        </div>
+        <div class="Elipse-1">
+
+        </div>
+    </div>
+     {% include 'footer.html' %}
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

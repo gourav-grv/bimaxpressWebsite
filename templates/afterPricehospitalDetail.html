@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+  {% load static %}
+  <link rel="stylesheet" href="{% static '/css/pricing.css' %}" />
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: white !important;
+      margin: 0px;
+      padding: 0px;
+      overflow-x: hidden;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .column {
+      float: left;
+      width: 50%;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .cardHospitalDetail {
+      width: 70%;
+      margin: auto;
+    }
+
+    .myform {
+      margin: 2em;
+      width: 90%;
+    }
+
+    .form-control {
+      border-radius: 20px;
+      margin-top: 1em;
+    }
+
+    .container {
+      border: 2px solid orange;
+      border-radius: 40px;
+      padding: 1em;
+    }
+    .num{
+      filter: invert(48%) sepia(13%) saturate(327%) hue-rotate(130deg) brightness(95%) contrast(20%);
+    }
+  </style>
+</head>
+
+<body>
+  {% include 'nav.html' %}
+  <br>
+  <p style="margin-bottom: 1em; margin-top: -1em; font-weight: bold !important; text-align: center;font-size: 2.2em;">
+    Few steps away from creating a hassle <br />
+    free health care experience
+  </p>
+
+  <div style="display: flex; margin: 2em;">
+    <div style="margin: auto; display: flex; justify-content: space-around; width: 800px;" >
+      <img src="../static/imgs/one.png" style="" alt="" width="80px" srcset="">
+      <img class="num" src="../static/imgs/two.png" alt="" width="80px" srcset="">
+      <img class="num" src="../static/imgs/three.png" alt="" width="80px" srcset="">
+      <img class="num" src="../static/imgs/four.png" alt="" width="80px" srcset="">
+      <img class="num" src="../static/imgs/five.png" alt="" width="80px" srcset="">
+      <img class="num" src="../static/imgs/six.png" alt="" width="80px" srcset="">
+    </div>
+  </div>
+
+  <div class="container" style="margin: auto; height: 33em;">
+    <p style="text-align: center; font-weight: bold; font-size: 1.3em;">Hospital Details</p>
+    <h5 style="Text-align: center; font-weight: bold;color:red;">{{message}}</h5>
+
+    <form action="/savehospitaldetails" method="POST">
+      {% csrf_token %}
+
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" name="hospital_name" placeholder="Hospital Name">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" name="rohini_id" placeholder="Rohini ID">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" name="hospital_email" placeholder="Email">
+        </div>
+        <div class="col">
+          <input type="password" class="form-control" name="hospital_password" placeholder="Password">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" name="address" placeholder="Address">
+        </div>
+
+        <div class="col">
+          <input type="text" class="form-control" name="phone" placeholder="phonenumber">
+        </div>
+
+      </div>
+
+
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" name="city" placeholder="city">
+        </div>
+
+        <div class="col">
+          <input type="text" class="form-control" name="state" placeholder="State">
+        </div>
+
+        
+      </div>
+
+      <div class="row">
+       
+      
+        <div class="col">
+          <input type="number" class="form-control" name="pinCode" placeholder="PINCODE">
+        </div>
+
+        <div class="col">
+          <input type="number" class="form-control" name="regno" placeholder="Hospital Registration Number">
+        </div>
+
+
+      </div>
+
+      <div class="row">
+       
+
+        <div class="col">
+
+          <select class="form-control" name="plan" id="plan">
+
+            {% for i in plan.keys %}
+            <option class="form-control" value="{{i}}">{{i}}</option>
+            {% endfor %}
+
+          </select>
+
+        </div>
+        <div class="col">
+          <input type="number" class="form-control" name="discountCode" placeholder="Discount Code">
+        </div>
+
+       
+        
+       
+
+      </div>
+
+      <div class="row">
+
+        <div class="col">
+          <input type="text" class="form-control" name="GST" placeholder="GST NUMBER">
+        </div> 
+
+        <div class="col">
+          <input type="text" class="form-control" name="PAN" placeholder="PAN NUMBER">
+        </div>
+
+      </div>
+      
+
+      <button type="submit" class="btn btn-warning"
+      style="background-color: orange !important; color: white; border-radius: 20px; width: 10em; margin-top: 2em; float: right;">Next</button>
+    </form>
+  </div>
+
+  {% include 'footer.html' %}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

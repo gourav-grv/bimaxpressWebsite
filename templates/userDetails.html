@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/pricing.css' %}" />
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: white !important;
+            margin: 0px;
+            padding: 0px;
+            overflow-x: hidden;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .cardHospitalDetail {
+            width: 70%;
+            margin: auto;
+        }
+
+        .myform {
+            margin: 2em;
+            width: 90%;
+        }
+
+        .form-control {
+            border-radius: 20px;
+            margin-top: 1em;
+        }
+
+        .container {
+            border: 2px solid orange;
+            border-radius: 5%;
+            padding: 1em;
+        }
+
+        .smallCard {
+            width: 200px;
+            height: auto;
+            border: 1px solid rgb(148, 148, 148);
+            color: rgb(148, 148, 148);
+            border-radius: 10px;
+            margin-top: 10px;
+            margin-right: 1em;
+            padding: 0.5em;
+        }
+
+        .cardTextSmall {
+            font-size: 12px;
+            text-align: center;
+            width: 190px;
+            overflow: hidden;
+            display: inline-block;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .num {
+            filter: invert(48%) sepia(13%) saturate(327%) hue-rotate(130deg) brightness(95%) contrast(20%);
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'nav.html' %}
+    <br>
+    <p style="margin-bottom: 1em; margin-top: 1em; font-weight: bold !important; text-align: center;font-size: 2.2em;">
+        Few steps away from creating a hassle <br />
+        free health care experience
+    </p>
+    <div style="display: flex; margin: 2em;">
+        <div style="margin: auto; display: flex; justify-content: space-around; width: 800px;">
+            <div>
+                <img src="../static/imgs/one.png" style="" alt="" width="80px" srcset=""> <br>
+                <p style="font-size: 10px;">Hospital Details</p>
+            </div>
+            <div>
+                <img src="../static/imgs/two.png" alt="" width="80px" srcset="">
+                <p style="font-size: 10px; text-align: center;">User Details</p>
+            </div>
+            <div>
+                <img class="num" src="../static/imgs/three.png" alt="" style="margin: auto;" width="80px" srcset="">
+                <p style="font-size: 10px; text-align: center;">Empanelled <br> Companies</p>
+            </div>
+            <div>
+                <img class="num" src="../static/imgs/four.png" alt="" width="80px" srcset="">
+                <p style="font-size: 10px; text-align: center;">Rate List</p>
+            </div>
+            <div>
+                <img class="num" src="../static/imgs/five.png" alt="" width="80px" srcset="">
+                <p style="font-size: 10px; text-align: center;">Email Setup</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin: auto; height: auto;">
+        <p style="text-align: center; font-weight: bold; font-size: 1.3em;">User Creation</p>
+
+        <h3 style="color:red;text-align: center; font-weight: bold; font-size: 1.3em;"> {{message}} </h3>
+
+        <form action="/saveusercreation" method="POST">
+            {% csrf_token %}
+            <p>
+            <ul> Claim Analyst </ul>
+            </p>
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control" name="name" id="Cname" placeholder="Name">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" name="email" id="Cemail" placeholder="Email">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input type="number" class="form-control" name="phone" id="Cphone" placeholder="Phone">
+                </div>
+                <div class="col">
+                    <input type="password" class="form-control" name="pass" id="Cpass" placeholder="Password">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" name="empid" placeholder="Employee Id">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button type="submit" onclick="return validateC()"class="btn btn-warning"
+                        style="background-color: orange !important; color: white; border-radius: 20px; width: 10em; margin-top: 1em;">Save</button>
+            <script>
+                function validateC(params) {
+                    var Cname = document.getElementById('Cname').value;
+                    var Cemail = document.getElementById('Cemail').value;
+                    var Cphone = String(document.getElementById('Cphone').value);
+                    var Cpass = document.getElementById('Cpass').value;
+                    if (Cname.length < 2) {
+                        alert('Enter Claim Analyst Name')
+                        return false
+                    }
+
+                    else if (Cemail.length < 3) {
+                        alert('Enter Claim Analyst Email')
+                        return false
+                    }
+
+                    else if (Cphone.length < 8) {
+                        alert('Please Check Number')
+                        return false
+                    }
+
+                    else if (Cpass.length < 6) {
+                        alert('Password is not less then 6')
+                        return false
+                    }
+                    else {
+                        return true
+                    }
+                }
+            </script>
+        </form>
+    </div>
+    </div>
+
+    <div style="display: flex;flex-wrap: wrap; ">
+        {% for i in claimAnalyst%}
+        <div class="smallCard">
+            <p class="cardTextSmall">Name : - {{i.name}}</p>
+            <p class="cardTextSmall" style="margin-top: -15px;">Email: - {{i.email}}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+
+    <br><br><br>
+    <hr style="border: 2px solid red;"><br><br><br>
+
+    <form action="/savedoctorcreation" method="POST">
+        {% csrf_token %}
+        <p>
+        <ul>Doctor</ul>
+        </p>
+        <h3 style="color:red;text-align: center; font-weight: bold; font-size: 1.3em;"> {{message}} </h3>
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" name="doctor_name" id="doctor_name" placeholder="Dr. Name">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="doctor_email" id="doctor_email" placeholder="Email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="number" class="form-control" name="doctor_phone" id="doctor_phone" placeholder="Phone No.">
+            </div>
+            <div class="col">
+                <input type="password" class="form-control" name="doctor_passwd" id="doctor_passwd" placeholder="Password">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" name="doctor_qualification" id="doctor_qualification" placeholder="Qualification">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="doctor_specialization" id="doctor_specialization" placeholder="Specialization">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" name="doctor_registration" id="doctor_registration" placeholder="Registration">
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+        <button type="submit" class="btn btn-warning" onclick="return validateD()"
+            style="background-color: orange !important; color: white; border-radius: 20px; width: 10em; margin-top: 1em;">Save</button>
+        <script>
+                function validateD(params) {
+                    var doctor_name = document.getElementById('doctor_name').value;
+                    var doctor_email = document.getElementById('doctor_email').value;
+                    var doctor_phone = document.getElementById('doctor_phone').value;
+                    var doctor_passwd = document.getElementById('doctor_passwd').value;
+                    var doctor_qualification = document.getElementById('doctor_qualification').value;
+                    var doctor_specialization = document.getElementById('doctor_specialization').value;
+                    var doctor_registration = document.getElementById('doctor_registration').value;
+                    if (doctor_name.length < 2) {
+                        alert('Enter Doctor Name')
+                        return false
+                    }
+
+                    else if (doctor_email.length < 3) {
+                        alert('Enter Doctor Email')
+                        return false
+                    }
+
+                    else if (doctor_phone.length < 8) {
+                        alert('Please Check Doctor Number')
+                        return false
+                    }
+
+                    else if (doctor_passwd.length < 6) {
+                        alert('Doctor Password is not less then 6')
+                        return false
+                    }
+                    else if (doctor_qualification.length < 1) {
+                        alert('Enter Qualification of Doctor')
+                        return false
+                    }
+                    else if (doctor_specialization.length < 3) {
+                        alert('Enter Specialization of Doctor')
+                        return false
+                    }
+                    else if (doctor_registration.length < 3) {
+                        alert('Enter Registration no of Doctor')
+                        return false
+                    }
+                    else {
+                        return true
+                    }
+                }
+            </script>
+    </form>
+    <div style="display: flex;flex-wrap: wrap; ">
+        {% for i in doctor %}
+        <div class="smallCard">
+            <p class="cardTextSmall">Name : - {{i.name}}</p>
+            <p class="cardTextSmall" style="margin-top: -15px;">Email: - {{i.email}}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <a href="afterPricehospitalDetail">
+        <button type="button" class="btn btn-warning"
+            style="background-color: orange !important; color: white; border-radius: 20px; width: 10em; margin-top: 1em; margin-top: 5em;">Previous</button>
+    </a>
+    <a href="empanelled_companies">
+        <button type="button" class="btn btn-warning"
+            style="background-color: orange !important; color: white; border-radius: 20px; width: 10em; margin-top: 1em; margin-top: 5em;">Next</button>
+    </a>
+
+    </div>
+
+    {% include 'footer.html' %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/pricing.css' %}" />
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: white !important;
+            background: url(../static/imgs/Path\ -7\ \(1\).png) no-repeat top left;
+            margin: 0px;
+            padding: 0px;
+            overflow-x: hidden;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+        }
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .cardHospitalDetail {
+            width: 70%;
+            margin: auto;
+        }
+        .myform {
+            margin: 2em;
+            width: 90%;
+        }
+
+        .form-control {
+            border-radius: 20px;
+            margin-top: 1.2em;
+        }
+
+        .container {
+            border: 2px solid orange;
+            border-radius: 5em;
+            padding: 1em;
+        }
+
+        .smallCard {
+            width: 150px;
+            border: 1px solid rgb(148, 148, 148);
+            color: rgb(148, 148, 148);
+            border-radius: 10px;
+            margin-top: 10px;
+            margin-right: 1em;
+        }
+
+        .cardTextSmall {
+            margin-top: -20px;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .logoCard {
+            align-items: center;
+            text-align: center;
+            margin-top: 3em;
+            margin-left: 130px;
+        }
+
+        .num {
+            filter: invert(48%) sepia(13%) saturate(327%) hue-rotate(130deg) brightness(95%) contrast(20%);
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'nav.html' %}
+    <br>
+    <p style="margin-bottom: 1em; margin-top: 1em; font-weight: bold !important; text-align: center;font-size: 2.2em;">
+        Few steps away from creating a hassle <br />
+        free health care experience
+    </p>
+    <div style="display: flex; margin: 2em;">
+        <div style="margin: auto; display: flex; justify-content: space-around; width: 800px;">
+            <img src="../static/imgs/one.png" style="" alt="" width="80px" srcset="">
+            <img src="../static/imgs/two.png" alt="" width="80px" srcset="">
+            <img src="../static/imgs/three.png" alt="" width="80px" srcset="">
+            <img src="../static/imgs/four.png" alt="" width="80px" srcset="">
+            <img src="../static/imgs/five.png" alt="" width="80px" srcset="">
+            <img src="../static/imgs/six.png" alt="" width="80px" srcset="">
+        </div>
+    </div>
+
+    <div class="container" style="margin: auto; height: auto; align-items: center;">
+        <p style="text-align: center; font-weight: bold; font-size: 1.5em;">Email Setup</p>
+        <span style="margin-left: 50px; font-size: 20px;font-weight: bold;"><u>Finishing</u></span>
+        <div
+            style="margin: auto; width: 80%; border: 1px solid rgb(173, 173, 173); border-radius: 20px;padding: 2em;margin-top: 10px; display: flex;margin-bottom: 50px;">
+            <div style="width: 60%;">
+                <form method='POST' action='/emailLogin'>
+                    {% csrf_token %}
+                    <p>My Email Host  {{my_host}}</p>
+
+                    {% if my_host == "gmail.com" %}
+                    <input style="visibility:hidden;" type="text" class="form-control" value="imap.gmail.com" name="imap" placeholder="imap">
+                    <input style="visibility:hidden;" type="text" class="form-control" value="smtp.gmail.com" name="smtp" placeholder="smtp">
+                    {% endif %}
+
+                    {% if my_host == "yahoo.com" %}
+                    <input style="visibility:hidden;" type="text" class="form-control" value="imap.mail.yahoo.com" name="imap" placeholder="imap">
+                    <input style="visibility:hidden;" type="text" class="form-control" value="smtp.mail.yahoo.com" name="smtp" placeholder="smtp">
+                    {% endif %}
+
+                    {% if my_host == "awsapps.com" %}
+                    <input style="visibility:hidden;" type="text" class="form-control" value="imap.mail.eu-west-1.awsapps.com" name="imap" placeholder="imap">
+                    <input style="visibility:hidden;" type="text" class="form-control" value="smtp.mail.eu-west-1.awsapps.com" name="smtp" placeholder="smtp">
+                    {% endif %}
+                   
+
+                    <input type="email" class="form-control" value="{{email_id}}" name="hospital_mail"
+                        placeholder="Email">
+                        
+                    <input type="password" class="form-control" name="hospital_password" placeholder="System Password">
+
+                 
+
+                    <input type="submit" class="btn btn-warning"
+                        style="background-color: orange !important; color: white; border-radius: 20px; width: 10em; margin-top: 1em; "
+                        value="Submit">
+
+                    
+                    <a href="https://pbs.twimg.com/profile_images/994209854037282816/TEEkWW3l_400x400.jpg" alt="Image description" target="_blank" style="display: inline-block; width: 50px; height: 50px; background-image: url('');">Document</a>
+                   
+                </form>
+                <br>
+
+                <a href="/email">
+
+                    <button type="button" class="btn btn-warning"
+                        style="background-color: orange !important; color: white; border-radius: 20px; width: 10em; margin-top: 1em; margin-top: 5em;">
+                        Previous
+                    </button>
+                </a>
+
+            </div>
+            <div style="width:40%; padding: 2em;">
+                <img class="img-fluid"
+                    src="https://media.wired.com/photos/5a1c63703175522110ea4800/master/pass/emailtracking-TA.jpg"
+                    alt="" srcset="">
+            </div>
+        </div>
+
+
+
+    </div>
+
+    {% include 'footer.html' %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+    <script>
+
+
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/covid.css' %}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="backgroundImgPath7">
+      {% include 'nav.html' %}
+      <div>
+        <div
+          class="middleDiv"
+          style="display: flex; justify-content: center; flex-wrap: wrap"
+        >
+          <div class="Qleft" style="flex: 1; width: 60%; padding: 10px">
+            <p style="font-size: 2.3rem; font-weight: bold">
+              Let's Break the Chain together <br />
+              Be a part of Mission 100
+            </p>
+            <div>
+              <p style="font-size: 20px">
+                Show Your empathy <br /><br />
+                <button
+                  type="submit"
+                  class="formButton"
+                  style="padding: 7px 40px; font-weight: bold"
+                >
+                  Contribute
+                </button>
+              </p>
+            </div>
+          </div>
+          <div class="Qright" style="flex: 1; padding: 10px">
+            <img
+              style="margin-left: 22%"
+              src="../static/imgs/girlGroupMask.png"
+              alt=""
+              srcset=""
+            />
+          </div>
+        </div>
+        <div class="middleDiv1" style="display: flex; margin-top: 2%">
+          <div style="padding: 10px; width: 35%" class="left">
+            <img
+              src="../static/imgs/mission 100.gif"
+              width="100%"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div style="width: 50%; padding: 10px" class="right">
+            <h1><b>Mission 100</b></h1>
+            <p style="font-size: 1.1rem">
+              In today's world we want to bring everyone together and do our bit
+              in breaking the Chain of COVID. With this vision we launch our
+              Mission 1000. Through this mission we are going to support people
+              in need to get access to medical essential items required for the
+              fight against covid 19. You can also be part of this mission by
+              donating an amount for this mission. Help us in raising funds and
+              achieving our mission to help 1000 families in need. Let us break
+              this chain together.
+            </p>
+            <p style="font-size: 1.2rem; color: red">
+              Every contribution matters !!
+            </p>
+            <button
+              type="submit"
+              class="formButton"
+              style="padding: 7px 40px; font-weight: bold"
+            >
+              Contribute
+            </button>
+          </div>
+        </div>
+        <div class="middleDiv2" style="display: flex; margin-top: 2%">
+          <div style="width: 50%; padding: 10px" class="left">
+            <h1 style="color: red"><b>Covid Isolated?</b></h1>
+            <h3>
+              <i><b>Register yourself for kit</b></i>
+            </h3>
+            <p style="font-size: 1.1rem">
+              Are you a Home Isolated patient w RTPCR report not older than 5
+              days? If yes, then please register on Bimaxpress website to be
+              eligible for a free CORONA Kit being delivered to you to your
+              doorstep. Bimaxpress has undertaken MISSION 1000 to help 1000
+              Covid impacted individuals and families by providing CORONA Kits
+              to them. CORONA Kit will comprise of Oxymeter, Vaporizer,
+              Thermometer, Gloves, Masks, Sanitizer. Stay home & stay safe and
+              lets break the chain together!
+            </p>
+            <button
+              type="submit"
+              class="formButton"
+              style="padding: 7px 40px; font-weight: bold"
+            >
+              Register
+            </button>
+          </div>
+          <div style="padding: 10px; width: 35%" class="right">
+            <img
+              src="../static/imgs/humanitarian-help-people-donating-sanitary-protection-equipment-concept-illustration_114360-1756.svg"
+              width="100%"
+              alt=""
+              srcset=""
+            />
+          </div>
+        </div>
+        {% include 'footer.html' %}
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

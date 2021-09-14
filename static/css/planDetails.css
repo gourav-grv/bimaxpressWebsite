@@ -1,0 +1,83 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+.bootNav {
+  background: transparent !important;
+  padding: 7%;
+  padding-top: 2% !important;
+  padding-bottom: 2% !important;
+  width: 100% !important;
+}
+.Nav {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  margin-top: 20px;
+}
+.forNavIcon {
+  margin-left: 10%;
+}
+.forNavAnchor {
+  margin-right: 10%;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.navAnchor {
+  margin: 15px;
+  text-decoration: none;
+  color: #514852;
+  font-weight: bold;
+}
+.mainHeading {
+  text-align: center;
+}
+.mainCard{
+  padding: 20px;
+  width: 50%;
+  border: 2px solid #fc8c03;
+  margin: auto;
+  border-radius: 25px;
+  height: 500px;
+}
+.footer {
+  background-color: black;
+  color: white;
+  margin-top: 50px;
+  width: 100%;
+  padding: 50px;
+}
+.footerTop {
+  display: flex;
+  justify-content: space-around;
+}
+.aboutUs {
+  width: 25%;
+}
+.contactUs {
+  width: 25%;
+}
+.connectWithUs {
+  width: 30%;
+}
+.icons {
+  display: flex;
+}
+.icon {
+  margin: 10px;
+}
+.copyRight {
+  text-align: center;
+}
+.footerBottom{
+    margin-top: 50px;
+}
+.footerBottomUnder{
+    color: #fc8c03;
+    display: flex;
+    width: 400px;
+    justify-content: space-around;
+    margin: auto;
+}

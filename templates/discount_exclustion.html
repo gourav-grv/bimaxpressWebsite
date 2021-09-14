@@ -1,0 +1,362 @@
+<!DOCTYPE htm>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/pricing.css' %}" />
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+
+    <style>
+        body {
+            background-color: white !important;
+            margin: 0px;
+            padding: 0px;
+            overflow-x: hidden;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .cardHospitalDetail {
+            width: 70%;
+            margin: auto;
+        }
+
+        .myform {
+            margin: 2em;
+            width: 90%;
+        }
+
+        .form-control {
+            border-radius: 20px;
+            margin-top: 1.2em;
+        }
+
+        .container {
+            border: 2px solid orange;
+            border-radius: 5em;
+            padding: 1em;
+        }
+
+        .smallCard {
+            width: 150px;
+            border: 1px solid rgb(148, 148, 148);
+            color: rgb(148, 148, 148);
+            border-radius: 10px;
+            margin-top: 10px;
+            margin-right: 1em;
+        }
+
+        .cardTextSmall {
+            margin-top: -20px;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .logoCard {
+            align-items: center;
+            text-align: center;
+            margin-top: 3em;
+            margin-left: 130px;
+        }
+                .num{
+      filter: invert(48%) sepia(13%) saturate(327%) hue-rotate(130deg) brightness(95%) contrast(20%);
+    }
+    </style>
+</head>
+
+<body>
+    <div id="wait"
+    style="display:none;width:100%;height:100vh;position:absolute;padding:2px; z-index: 9999; backdrop-filter: blur(5px);">
+    <img src='../static/dist/img/animation_300_kritqvcb.gif' id="loadingImg" width="200" height="200"
+      style="margin-top:15%;margin-left:40%;" />
+  </div>
+    {% include 'nav.html' %}
+    <br>
+    <p style="margin-bottom: 1em; margin-top: 1em; font-weight: bold !important; text-align: center;font-size: 2.2em;">
+        Few steps away from creating a hassle <br />
+        free health care experience
+    </p>
+        <div style="display: flex; margin: 2em;">
+        <div style="margin: auto; display: flex; justify-content: space-around; width: 800px;" >
+          <img src="../static/imgs/one.png" style="" alt="" width="80px" srcset="">
+          <img  src="../static/imgs/two.png" alt="" width="80px" srcset="">
+          <img  src="../static/imgs/three.png" alt="" width="80px" srcset="">
+          <img src="../static/imgs/four.png" alt="" width="80px" srcset="">
+          <img class="num" src="../static/imgs/five.png" alt="" width="80px" srcset="">
+          <img class="num" src="../static/imgs/six.png" alt="" width="80px" srcset="">
+        </div>
+      </div>
+
+    <div class="container" style="margin: auto; height: auto; align-items: center;">
+        <p style="text-align: center; font-weight: bold; font-size: 1.5em;">Rate List</p>
+        <p style="text-align: center; font-weight: bold; font-size: 1.5em;"> Discount & Exclusion</p>
+        
+
+        {% for key,value in images.items %}
+
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+            <div style="width: 20% !important;">
+                <div class="logoCard" style="max-height: 100px !important; max-width: 100px !important;">
+                    <img src="{{value}}" class="img-fluid" alt="" srcset="">
+                </div>
+            </div>
+
+            <div style="width: 14em;">
+                <span>Upload Ratelist</span>
+                <input type="file" id="upload" class="form-control upload" onchange="uploadDoc('{{key}}','{{email}}')"
+                    name="upload" placeholder="Fill">
+            </div>
+
+            <div style="width: 14em;">
+                <span> Discount Details </span>
+
+                <input type="text" class="form-control" value="" id='{{key}}'
+                    onchange="uploadDiscount('{{key}}','{{email}}')" placeholder="Discount Details">
+
+            </div>
+
+            <div style="width: 14em;">
+                <span>Exclusion Details</span>
+                <input type="text" class="form-control" id="{{key}}{{email}}" value="" placeholder="Exclusion Details"
+                onchange="uploadExclu('{{key}}','{{email}}')">
+            </div>
+            <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Launch demo modal
+            </button> -->
+        </div> <br>
+        <div >
+            <span>Upload Portal Details</span>
+            <input type="radio" data-toggle="modal" data-target="#{{key.0}}{{key.1}}{{key.2}}{{key.3}}{{key.4}}{{key.5}}{{key.6}}" name="{{key}}"> Yes <input type="radio" name="{{key}}"> No
+            
+        </div>
+
+        <div class="modal fade" id="{{key.0}}{{key.1}}{{key.2}}{{key.3}}{{key.4}}{{key.5}}{{key.6}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Portal Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control" id="{{key.0}}{{key.1}}{{key.2}}{{key.3}}{{key.4}}{{key.5}}" value="" placeholder="UserId"
+                    onchange="uploadUser1('{{key.0}}{{key.1}}{{key.2}}{{key.3}}{{key.4}}{{key.5}}','{{email}}','{{key}}')">
+
+                    <input type="password" class="form-control" id="{{key.5}}{{key.4}}{{key.3}}{{key.2}}{{key.1}}{{key.0}}" value="" placeholder="Password"
+                    onchange="uploadPass1('{{key.5}}{{key.4}}{{key.3}}{{key.2}}{{key.1}}{{key.0}}','{{email}}','{{key}}')">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        <!-- <div class="logoCard" style="display: flex; justify-content: space-between; margin-top: -1em;">
+            <input type="text" class="form-control" value="" id='{{key}}'
+            onchange="uploadDiscount('{{key}}','{{email}}')" placeholder="Discount Details">
+            <input type="text" class="form-control" value="" id='{{key}}'
+            onchange="uploadDiscount('{{key}}','{{email}}')" placeholder="Discount Details">
+        </div> -->
+
+        <hr>
+
+        {% endfor %}
+        
+        <button type="button" onclick="window.location.href='empanelled_companies'" class="btn btn-warning"
+            style="background-color: orange !important; color: white; border-radius: 20px; width: 10em; margin-top: 1em; margin-top: 5em;">Previous</button>
+
+        <button type="button" id="nextBtn" class="btn btn-warning" onclick="window.location.href='email'"
+            style="background-color: orange !important; color: white; border-radius: 20px; width: 10em; margin-top: 1em; margin-top: 5em;">Next</button>
+
+
+    </div>
+
+    {% include 'footer.html' %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyDlZMu8lypZDEhRpMVKlD3JcTuvItFaG2A",
+            authDomain: "bimaxpress-cashless.firebaseapp.com",
+            projectId: "bimaxpress-cashless",
+            storageBucket: "bimaxpress-cashless.appspot.com",
+            messagingSenderId: "577257002368",
+            appId: "1:577257002368:web:489252768c47b398465d65",
+            measurementId: "G-Y8B68GW5YX"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore()
+        // function checking() {
+        //     console.log(document.getElementById('upload').value);
+        // }
+        function uploadDoc(name, email) {
+            $("#wait").css("display", "block");
+            document.getElementById('nextBtn').setAttribute('disabled','')
+
+            console.log(email)
+            doc_ref = db.collection("hospitals").doc(email)
+
+
+            
+            const ref = firebase.storage().ref()
+            const file = document.querySelector(".upload").files[0]
+            const filename = file.name
+            const metadata = {
+                contentType: file.type
+            }
+            const task = ref.child(`ratelists/${name}/${email}/${filename}`).put(file, metadata)
+            task
+                .then(snapshot => snapshot.ref.getDownloadURL())
+                .then(url => {
+                    var newname = name;
+                    doc_ref.set({
+                        Empanelled_companies: {
+                            [`${name}`]: { "Ratelist": url }
+
+                        }
+                    }, { merge: true }).then(function (docRef) {
+                        console.log("document refer with id", docRef.id)
+                    }).catch(function (error) {
+                        console.log(error)
+                    })
+                    $("#wait").css("display", "none");
+                    document.getElementById('nextBtn').removeAttribute('disabled','')
+                })
+        }
+        function uploadDiscount(name, email) {
+            console.log(name)
+            var discount = document.getElementById(name).value;
+
+            doc_ref = db.collection("hospitals").doc(email)
+            doc_ref.set({
+
+                Empanelled_companies: {
+                    [`${name}`]: { "Discount": discount }
+
+                }
+            }, { merge: true }).then(function (docRef) {
+                console.log("document refer with id", docRef.id)
+            }).catch(function (error) {
+                console.log(error)
+            })
+        }
+        function uploadExclu(name, email) {
+            var exec = document.getElementById(name + email).value;
+
+            doc_ref = db.collection("hospitals").doc(email)
+            doc_ref.set({
+
+                Empanelled_companies: {
+                    [`${name}`]: {"Exclusion": exec}
+
+                }
+            }, { merge: true }).then(function (docRef) {
+                console.log("document refer with id", docRef.id)
+            }).catch(function (error) {
+                console.log(error)
+            })
+        }
+
+        function uploadUser1(id,email,name) {
+            
+            
+            console.log(email,name);
+            var exec = document.getElementById(id).value;
+            console.log(exec);
+
+            doc_ref = db.collection("hospitals").doc(email)
+            doc_ref.set({
+
+                Empanelled_companies: {
+                    [`${name}`]: {"Userid": exec}
+
+                }
+            }, { merge: true }).then(function (docRef) {
+                console.log("document refer with id", docRef.id)
+            }).catch(function (error) {
+                console.log(error)
+            })
+        }
+        function uploadPass1(id2,email,name) {
+            console.log(email,name);
+            var exec2 = document.getElementById(id2).value;
+            console.log(exec2);
+
+            doc_ref = db.collection("hospitals").doc(email)
+            doc_ref.set({
+
+                Empanelled_companies: {
+                    [`${name}`]: {"Password": exec2}
+
+                }
+            }, { merge: true }).then(function (docRef) {
+                console.log("document refer with id", docRef.id)
+            }).catch(function (error) {
+                console.log(error)
+            })
+        }
+
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

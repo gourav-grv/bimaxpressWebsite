@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bimaxpress Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+  {% load static %}
+  <link rel="stylesheet" href="{% static '/css/home.css' %}" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+  <style>
+    .testim .wrap {
+      position: relative;
+      width: 100%;
+      max-width: 1020px;
+      padding: 40px 20px;
+      margin: auto;
+    }
+    .heading {
+    text-align: center;
+    color: #454343;
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+    z-index: 999;
+}
+.white-heading{
+    color: #ffffff;
+}
+.heading:after {
+    content: ' ';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    height: 40px;
+    width: 180px;
+    border-radius: 4px;
+    transform: translateX(-50%);
+    background: url(img/heading-line.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.white-heading:after {
+    background: url(https://i.ibb.co/d7tSD1R/heading-line-white.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.heading span {
+    font-size: 18px;
+    display: block;
+    font-weight: 500;
+}
+.white-heading span {
+    color: #ffffff;
+}
+/*-----Testimonial-------*/
+
+.testimonial:after {
+    position: absolute;
+    top: -0 !important;
+    left: 0;
+    content: " ";
+    background: url(img/testimonial.bg-top.png);
+    background-size: 100% 100px;
+    width: 100%;
+    height: 100px;
+    float: left;
+    z-index: 99;
+}
+
+.testimonial {
+    min-height: 375px;
+    position: relative;
+    
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-position: center;
+        background-size: cover;
+}
+#testimonial4 .carousel-inner:hover{
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+#testimonial4 .carousel-inner:active{
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+#testimonial4 .carousel-inner .item{
+  overflow: hidden;
+}
+
+.testimonial4_indicators .carousel-indicators{
+  left: 0;
+  margin: 0;
+  width: 100%;
+  font-size: 0;
+  height: 20px;
+  bottom: 15px;
+  padding: 0 5px;
+  cursor: e-resize;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+}
+.testimonial4_indicators .carousel-indicators li{
+  padding: 0;
+  width: 14px;
+  height: 14px;
+  border: none;
+  text-indent: 0;
+  margin: 2px 3px;
+  cursor: pointer;
+  display: inline-block;
+  background: #ffffff;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+.testimonial4_indicators .carousel-indicators .active{
+  padding: 0;
+  width: 14px;
+  height: 14px;
+  border: none;
+  margin: 2px 3px;
+  background-color: #9dd3af;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+.testimonial4_indicators .carousel-indicators::-webkit-scrollbar{
+  height: 3px;
+}
+.testimonial4_indicators .carousel-indicators::-webkit-scrollbar-thumb{
+  background: #eeeeee;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+.testimonial4_control_button .carousel-control{
+  top: 175px;
+  opacity: 1;
+  width: 40px;
+  bottom: auto;
+  height: 40px;
+  font-size: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  overflow: hidden;
+  line-height: 38px;
+  text-shadow: none;
+  text-align: center;
+  position: absolute;
+  background: transparent;
+  border: 2px solid #ffffff;
+  text-transform: uppercase;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: all 0.6s cubic-bezier(0.3,1,0,1);
+  transition: all 0.6s cubic-bezier(0.3,1,0,1);
+}
+.testimonial4_control_button .carousel-control.left{
+  left: 7%;
+  top: 50%;
+  right: auto;
+}
+.testimonial4_control_button .carousel-control.right{
+  right: 7%;
+  top: 50%;
+  left: auto;
+}
+.testimonial4_control_button .carousel-control.left:hover,
+.testimonial4_control_button .carousel-control.right:hover{
+  color: #000;
+  background: #fff;
+  border: 2px solid #fff;
+}
+
+.testimonial4_header{
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 550px;
+  display: block;
+  margin: 30px auto;
+  text-align: center;
+  position: relative;
+}
+.testimonial4_header h4{
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.testimonial4_slide{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 70%;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+}
+.testimonial4_slide img {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 136px;
+    height: 136px;
+    margin: auto;
+    display: block;
+    color: block;
+    font-size: 18px;
+    line-height: 46px;
+    text-align: center;
+    position: relative;
+    border-radius: 50%;
+    box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.23);
+    -moz-box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.23);
+    -o-box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.23);
+    -webkit-box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.23);
+}
+.testimonial4_slide p {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1.4;
+    margin: 40px 0 20px 0;
+}
+.testimonial4_slide h4 {
+  color: #ffffff;
+  font-size: 22px;
+}
+
+.testimonial .carousel {
+	padding-bottom:50px;
+}
+.testimonial .carousel-control-next-icon, .testimonial .carousel-control-prev-icon {
+    width: 35px;
+    height: 35px;
+}
+/* ------testimonial  close-------*/
+
+    .testim .arrow {
+      display: block;
+      position: absolute;
+      color: #333;
+      cursor: pointer;
+      font-size: 2em;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+      -webkit-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      padding: 5px;
+      z-index: 22222222;
+    }
+
+    .testim .arrow:before {
+      cursor: pointer;
+    }
+
+    .testim .arrow:hover {
+      color: #fc8c03;
+    }
+
+    .testim .arrow.left {
+      left: 70px;
+    }
+
+    .testim .arrow.right {
+      right: 70px;
+    }
+
+    .testim .dots {
+      text-align: center;
+      position: absolute;
+      width: 100%;
+      bottom: 60px;
+      left: 0;
+      display: block;
+      z-index: 3333;
+      height: 12px;
+    }
+
+    .testim .dots .dot {
+      list-style-type: none;
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 1px solid #fc8c03;
+      margin: 0 10px;
+      cursor: pointer;
+      -webkit-transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+      position: relative;
+    }
+
+    .testim .dots .dot.active,
+    .testim .dots .dot:hover {
+      background: #fc8c03;
+      border-color: #fc8c03;
+    }
+
+    .testim .dots .dot.active {
+      -webkit-animation: testim-scale 0.5s ease-in-out forwards;
+      -moz-animation: testim-scale 0.5s ease-in-out forwards;
+      -ms-animation: testim-scale 0.5s ease-in-out forwards;
+      -o-animation: testim-scale 0.5s ease-in-out forwards;
+      animation: testim-scale 0.5s ease-in-out forwards;
+    }
+
+    .testim .cont {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .testim .cont>div {
+      text-align: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0 0 70px 0;
+      opacity: 0;
+    }
+
+    .testim .cont>div.inactive {
+      opacity: 1;
+    }
+
+    .testim .cont>div.active {
+      position: relative;
+      opacity: 1;
+    }
+
+    .testim .cont div .img img {
+      display: block;
+      width: 100px;
+      height: 100px;
+      margin: auto;
+      border-radius: 50%;
+    }
+
+    .testim .cont div h2 {
+      color: #fc8c03;
+      font-size: 1em;
+      margin: 15px 0;
+    }
+
+    .testim .cont div p {
+      font-size: 1.15em;
+      color: #333;
+      width: 70%;
+      margin: auto;
+    }
+
+    .testim .cont div.active .img img {
+      -webkit-animation: testim-show 0.5s ease-in-out forwards;
+      -moz-animation: testim-show 0.5s ease-in-out forwards;
+      -ms-animation: testim-show 0.5s ease-in-out forwards;
+      -o-animation: testim-show 0.5s ease-in-out forwards;
+      animation: testim-show 0.5s ease-in-out forwards;
+    }
+
+    .testim .cont div.active h2 {
+      -webkit-animation: testim-content-in 0.4s ease-in-out forwards;
+      -moz-animation: testim-content-in 0.4s ease-in-out forwards;
+      -ms-animation: testim-content-in 0.4s ease-in-out forwards;
+      -o-animation: testim-content-in 0.4s ease-in-out forwards;
+      animation: testim-content-in 0.4s ease-in-out forwards;
+    }
+
+    .testim .cont div.active p {
+      -webkit-animation: testim-content-in 0.5s ease-in-out forwards;
+      -moz-animation: testim-content-in 0.5s ease-in-out forwards;
+      -ms-animation: testim-content-in 0.5s ease-in-out forwards;
+      -o-animation: testim-content-in 0.5s ease-in-out forwards;
+      animation: testim-content-in 0.5s ease-in-out forwards;
+    }
+
+    .testim .cont div.inactive .img img {
+      -webkit-animation: testim-hide 0.5s ease-in-out forwards;
+      -moz-animation: testim-hide 0.5s ease-in-out forwards;
+      -ms-animation: testim-hide 0.5s ease-in-out forwards;
+      -o-animation: testim-hide 0.5s ease-in-out forwards;
+      animation: testim-hide 0.5s ease-in-out forwards;
+    }
+
+    .testim .cont div.inactive h2 {
+      -webkit-animation: testim-content-out 0.4s ease-in-out forwards;
+      -moz-animation: testim-content-out 0.4s ease-in-out forwards;
+      -ms-animation: testim-content-out 0.4s ease-in-out forwards;
+      -o-animation: testim-content-out 0.4s ease-in-out forwards;
+      animation: testim-content-out 0.4s ease-in-out forwards;
+    }
+
+    .testim .cont div.inactive p {
+      -webkit-animation: testim-content-out 0.5s ease-in-out forwards;
+      -moz-animation: testim-content-out 0.5s ease-in-out forwards;
+      -ms-animation: testim-content-out 0.5s ease-in-out forwards;
+      -o-animation: testim-content-out 0.5s ease-in-out forwards;
+      animation: testim-content-out 0.5s ease-in-out forwards;
+    }
+
+    @-webkit-keyframes testim-scale {
+      0% {
+        -webkit-box-shadow: 0px 0px 0px 0px #eee;
+        box-shadow: 0px 0px 0px 0px #eee;
+      }
+
+      35% {
+        -webkit-box-shadow: 0px 0px 10px 5px #eee;
+        box-shadow: 0px 0px 10px 5px #eee;
+      }
+
+      70% {
+        -webkit-box-shadow: 0px 0px 10px 5px #ea830e;
+        box-shadow: 0px 0px 10px 5px #ea830e;
+      }
+
+      100% {
+        -webkit-box-shadow: 0px 0px 0px 0px #ea830e;
+        box-shadow: 0px 0px 0px 0px #ea830e;
+      }
+    }
+
+    @-moz-keyframes testim-scale {
+      0% {
+        -moz-box-shadow: 0px 0px 0px 0px #eee;
+        box-shadow: 0px 0px 0px 0px #eee;
+      }
+
+      35% {
+        -moz-box-shadow: 0px 0px 10px 5px #eee;
+        box-shadow: 0px 0px 10px 5px #eee;
+      }
+
+      70% {
+        -moz-box-shadow: 0px 0px 10px 5px #ea830e;
+        box-shadow: 0px 0px 10px 5px #ea830e;
+      }
+
+      100% {
+        -moz-box-shadow: 0px 0px 0px 0px #ea830e;
+        box-shadow: 0px 0px 0px 0px #ea830e;
+      }
+    }
+
+    @-ms-keyframes testim-scale {
+      0% {
+        -ms-box-shadow: 0px 0px 0px 0px #eee;
+        box-shadow: 0px 0px 0px 0px #eee;
+      }
+
+      35% {
+        -ms-box-shadow: 0px 0px 10px 5px #eee;
+        box-shadow: 0px 0px 10px 5px #eee;
+      }
+
+      70% {
+        -ms-box-shadow: 0px 0px 10px 5px #ea830e;
+        box-shadow: 0px 0px 10px 5px #ea830e;
+      }
+
+      100% {
+        -ms-box-shadow: 0px 0px 0px 0px #ea830e;
+        box-shadow: 0px 0px 0px 0px #ea830e;
+      }
+    }
+
+    @-o-keyframes testim-scale {
+      0% {
+        -o-box-shadow: 0px 0px 0px 0px #eee;
+        box-shadow: 0px 0px 0px 0px #eee;
+      }
+
+      35% {
+        -o-box-shadow: 0px 0px 10px 5px #eee;
+        box-shadow: 0px 0px 10px 5px #eee;
+      }
+
+      70% {
+        -o-box-shadow: 0px 0px 10px 5px #ea830e;
+        box-shadow: 0px 0px 10px 5px #ea830e;
+      }
+
+      100% {
+        -o-box-shadow: 0px 0px 0px 0px #ea830e;
+        box-shadow: 0px 0px 0px 0px #ea830e;
+      }
+    }
+
+    @keyframes testim-scale {
+      0% {
+        box-shadow: 0px 0px 0px 0px #eee;
+      }
+
+      35% {
+        box-shadow: 0px 0px 10px 5px #eee;
+      }
+
+      70% {
+        box-shadow: 0px 0px 10px 5px #ea830e;
+      }
+
+      100% {
+        box-shadow: 0px 0px 0px 0px #ea830e;
+      }
+    }
+
+    @-webkit-keyframes testim-content-in {
+      from {
+        opacity: 0;
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+      }
+
+      to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+    }
+
+    @-moz-keyframes testim-content-in {
+      from {
+        opacity: 0;
+        -moz-transform: translateY(100%);
+        transform: translateY(100%);
+      }
+
+      to {
+        opacity: 1;
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+      }
+    }
+
+    @-ms-keyframes testim-content-in {
+      from {
+        opacity: 0;
+        -ms-transform: translateY(100%);
+        transform: translateY(100%);
+      }
+
+      to {
+        opacity: 1;
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+      }
+    }
+
+    @-o-keyframes testim-content-in {
+      from {
+        opacity: 0;
+        -o-transform: translateY(100%);
+        transform: translateY(100%);
+      }
+
+      to {
+        opacity: 1;
+        -o-transform: translateY(0);
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes testim-content-in {
+      from {
+        opacity: 0;
+        transform: translateY(100%);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @-webkit-keyframes testim-content-out {
+      from {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+
+      to {
+        opacity: 0;
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+      }
+    }
+
+    @-moz-keyframes testim-content-out {
+      from {
+        opacity: 1;
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+      }
+
+      to {
+        opacity: 0;
+        -moz-transform: translateY(-100%);
+        transform: translateY(-100%);
+      }
+    }
+
+    @-ms-keyframes testim-content-out {
+      from {
+        opacity: 1;
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+      }
+
+      to {
+        opacity: 0;
+        -ms-transform: translateY(-100%);
+        transform: translateY(-100%);
+      }
+    }
+
+    @-o-keyframes testim-content-out {
+      from {
+        opacity: 1;
+        -o-transform: translateY(0);
+        transform: translateY(0);
+      }
+
+      to {
+        opacity: 0;
+        transform: translateY(-100%);
+        transform: translateY(-100%);
+      }
+    }
+
+    @keyframes testim-content-out {
+      from {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      to {
+        opacity: 0;
+        transform: translateY(-100%);
+      }
+    }
+
+    @-webkit-keyframes testim-show {
+      from {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      }
+
+      to {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+
+    @-moz-keyframes testim-show {
+      from {
+        opacity: 0;
+        -moz-transform: scale(0);
+        transform: scale(0);
+      }
+
+      to {
+        opacity: 1;
+        -moz-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+
+    @-ms-keyframes testim-show {
+      from {
+        opacity: 0;
+        -ms-transform: scale(0);
+        transform: scale(0);
+      }
+
+      to {
+        opacity: 1;
+        -ms-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+
+    @-o-keyframes testim-show {
+      from {
+        opacity: 0;
+        -o-transform: scale(0);
+        transform: scale(0);
+      }
+
+      to {
+        opacity: 1;
+        -o-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+
+    @keyframes testim-show {
+      from {
+        opacity: 0;
+        transform: scale(0);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @-webkit-keyframes testim-hide {
+      from {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+
+      to {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      }
+    }
+
+    @-moz-keyframes testim-hide {
+      from {
+        opacity: 1;
+        -moz-transform: scale(1);
+        transform: scale(1);
+      }
+
+      to {
+        opacity: 0;
+        -moz-transform: scale(0);
+        transform: scale(0);
+      }
+    }
+
+    @-ms-keyframes testim-hide {
+      from {
+        opacity: 1;
+        -ms-transform: scale(1);
+        transform: scale(1);
+      }
+
+      to {
+        opacity: 0;
+        -ms-transform: scale(0);
+        transform: scale(0);
+      }
+    }
+
+    @-o-keyframes testim-hide {
+      from {
+        opacity: 1;
+        -o-transform: scale(1);
+        transform: scale(1);
+      }
+
+      to {
+        opacity: 0;
+        -o-transform: scale(0);
+        transform: scale(0);
+      }
+    }
+
+    @keyframes testim-hide {
+      from {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      to {
+        opacity: 0;
+        transform: scale(0);
+      }
+    }
+
+    @media all and (max-width: 300px) {
+      body {
+        font-size: 14px;
+      }
+    }
+
+    @media all and (max-width: 500px) {
+      .testim .arrow {
+        font-size: 1.5em;
+      }
+
+      .testim .cont div p {
+        line-height: 25px;
+      }
+    }
+    
+  </style>
+</head>
+
+<body>
+  {% include 'nav.html' %}
+  <div class="middleDiv" style="display: flex; justify-content: center; flex-wrap: wrap;">
+    <div class="Qleft" style="flex: 1">
+      <p class="heading">
+        Building Confidence In <br />
+        Health Insurance<br />
+        <input type="button" style="margin-top: 50px" class="formButton" value="App Demo">
+      </p>
+    </div>
+    <div class="Qright" style="flex: 1">
+      <form action="" class="form">
+        <input type="text" class="formElement" placeholder="Name" name="" id="" />
+        <input type="email" class="formElement" placeholder="Email" name="" id="" />
+        <input type="tel" class="formElement" placeholder="Phone" name="" id="" />
+        <textarea name="" class="formElement" id="" cols="30" rows="10"></textarea>
+        <button type="submit" class="formButton">Submit</button>
+      </form>
+    </div>
+  </div>
+  <div class="brandAssosiation">
+    <img src="../static/imgs/Bimaxpress illustration.svg" width="100%" style="padding: 50px" alt="" />
+    <h4 style="text-align: center">Brand Assosiation With Us</h4>
+  </div>
+  <div class="healthInsuranceClaim" style="padding: 0px">
+    <p class="heading" style="text-align: center">
+      Health Insurance Claim Reimbursement
+    </p>
+    <!-- <div class="row">
+      <div class="column">5</div>
+      <div class="column">5</div>
+    </div> -->
+    <div class="middleDiv" style="display: flex; flex-wrap: wrap">
+      <div class="left">
+        <h1>Fully automated process</h1>
+        <p class="subheading">
+          Don't worry about your medical claim reimbursement.get maximum out
+          of your health insurance claim from the comfort of your home.
+        </p>
+        <h1>Maximum claim settlement</h1>
+        <p class="subheading">
+          fully automated process and free pickup of documents from your
+          doorstep.
+        </p>
+        <h1>Free documents pickup</h1>
+        <p class="subheading">
+          fully automated process and free pickup of documents from your
+          doorstep.
+        </p>
+        <button type="submit" class="formButton">Know more!</button>
+      </div>
+      <div class="right">
+        <img src="../static/imgs/insurancePolicy.svg" width="100%" alt="" />
+      </div>
+    </div>
+  </div>
+  <div class="upperWhatPeopleSay">
+    <div class="whatPeopleSay" style="width: 40%; margin: auto">
+      <p class="heading rechtangle" style="text-align: center">
+        What People Says
+      </p>
+    </div>
+  </div>
+  <div class="container">
+    <section id="testim" class="testim">
+      <div class="testim-cover">
+        <div class="wrap">
+
+          <span id="right-arrow" class="arrow right fa fa-chevron-right" style="visibility: hidden;"></span>
+          <span id="left-arrow" class="arrow left fa fa-chevron-left " style="visibility: hidden;"></span>
+          <ul id="testim-dots" class="dots">
+            <li class="dot active"></li>
+            <!--
+                    -->
+            <li class="dot"></li>
+            <!--
+                    -->
+            <li class="dot"></li>
+            <!--
+                    -->
+            <li class="dot"></li>
+            <!--
+                    -->
+            <li class="dot"></li>
+          </ul>
+          <div id="testim-content" class="cont">
+
+            <div class="active">
+
+              <h2>Lorem P. Ipsum</h2>
+              <p>"I would like to appreciate the level
+                of customer service provided by the
+                whole team. Their experience with
+                the entire process and outlook
+                towards problems always made me feel
+                content and helped me get through
+                with everything. Really amazing
+                customer service!"</p>
+            </div>
+
+            <div>
+
+              <h2>Mr. Lorem Ipsum</h2>
+              <p>“I am extremely grateful to the team for
+                providing me the support and footwork during
+                the documentation process. As a novice,
+                documentation was the most dreaded part as
+                on every visit some new requirement would
+                come up, dragging out the process. Kudos to
+                the dedication shown by BimaXpress for my
+                claim. I truly felt like a priority with
+                BimaXpress.”</p>
+            </div>
+
+            <div>
+
+              <h2>Lorem Ipsum</h2>
+              <p>“I came across BimaXpress while I was stuck
+                in the process of documentation for claims
+                reimbursement and hospital visits. Without
+                giving it a second thought I went with it.
+                They made the whole process so easy and
+                intuitive that I would recommend their
+                services to everyone in their time of
+                need.”</p>
+            </div>
+
+            <div>
+
+              <h2>Lorem De Ipsum</h2>
+              <p>“BimaXpress helped me and stayed with
+                me throughout my journey for my
+                reimbursement claim. Be it helping me
+                understand the process or solving my queries
+                about it, the response and feedback were
+                always prompt and apt. BimaXpress really did
+                take a lot of load off me, and I really
+                appreciate their efforts. 10/10 would</p>
+            </div>
+
+            <div>
+              <h2>Ms. Lorem R. Ipsum</h2>
+              <p>"I have been extremely happy with
+                BimaXpress. I found it easy to
+                get&nbsp;started with as it was my first
+                time filing for claim reimbursement.
+                BimaXpress helped me through each
+                step and made my understanding very
+                clear of the whole process. The
+                cooperation from the team has been
+                great".</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="https://use.fontawesome.com/1744f3f671.js"></script>
+
+  <script src="https://use.fontawesome.com/1744f3f671.js"></script>
+
+  <p class="heading rechtangle" style="text-align: center"><b>Hospitals collaborated with us</b></p>
+  <div style="display: flex; justify-content: space-around;">
+    <div class="swiper-slide" style="width: 8em;"><img src="../static/imgs/clients/2021-01-20.jpg" class="img-fluid" alt=""></div>
+    <div class="swiper-slide" style="width: 8em;"><img src="../static/imgs/clients/ABM.png" class="img-fluid" alt=""></div>
+    <div class="swiper-slide" style="width: 8em;"><img src="../static/imgs/clients/client1.0.jpeg" class="img-fluid" alt=""></div>
+    <div class="swiper-slide" style="width: 8em;"><img src="../static/imgs/clients/unnamed.png" class="img-fluid" alt=""></div>
+  </div>
+
+
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Blog Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<section class="testimonial text-center">
+  <div class="container">
+
+     <div class="whatPeopleSay" style="width: 40%; margin: auto">
+      <p class="heading rechtangle" style="text-align: center">
+       Blogs
+      </p>
+    </div>
+    <div id="testimonial4" class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
+
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+         <a style="text-decoration:none;" target="_blank" href="{% url 'blogredirect' %}?data=" >
+            <div class="testimonial4_slide">
+              <img src="https://cdn.dribbble.com/users/3281732/screenshots/6784133/samji_illustrator_4x.jpeg" class="img-circle img-responsive" />
+              <p style="color:black;"> Blog details </p>
+              <h4 style="color:black;"> 21/23/21 </h4>
+            </div>
+          </a>
+        </div>
+
+        {% for i,j in datablog.items %}
+       
+        <div class="carousel-item">
+         <a style="text-decoration:none;" href="{% url 'blogredirect' %}?data={{i}}" >
+            <div class="testimonial4_slide">
+            <img src="{{j.img}}" class="img-circle img-responsive" />
+            <p style="color:black;"> {{j.title}} </p>
+            <h4 style="color:black;"> {{j.date}} </h4>
+          </div>
+          </a>
+        </div>
+      
+        {% endfor %}
+      </div>
+      <a class="carousel-control-prev" href="#testimonial4" data-slide="prev">
+        <span style="background-color:orange;" class="carousel-control-prev-icon"></span>
+      </a>
+      <a  class="carousel-control-next" href="#testimonial4" data-slide="next">
+        <span  style="background-color:orange;"  class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+  </div>
+</section>
+   
+  </div>
+  
+  {% include 'footer.html' %}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+</body>
+{% load static %}
+<script src="{% static '/js/home.js' %}"></script>
+<script>
+  // vars
+  "use strict";
+  var testim = document.getElementById("testim"),
+    testimDots = Array.prototype.slice.call(
+      document.getElementById("testim-dots").children
+    ),
+    testimContent = Array.prototype.slice.call(
+      document.getElementById("testim-content").children
+    ),
+    testimLeftArrow = document.getElementById("left-arrow"),
+    testimRightArrow = document.getElementById("right-arrow"),
+    testimSpeed = 4500,
+    currentSlide = 0,
+    currentActive = 0,
+    testimTimer,
+    touchStartPos,
+    touchEndPos,
+    touchPosDiff,
+    ignoreTouch = 30;
+  window.onload = function () {
+    // Testim Script
+    function playSlide(slide) {
+      for (var k = 0; k < testimDots.length; k++) {
+        testimContent[k].classList.remove("active");
+        testimContent[k].classList.remove("inactive");
+        testimDots[k].classList.remove("active");
+      }
+
+      if (slide < 0) {
+        slide = currentSlide = testimContent.length - 1;
+      }
+
+      if (slide > testimContent.length - 1) {
+        slide = currentSlide = 0;
+      }
+
+      if (currentActive != currentSlide) {
+        testimContent[currentActive].classList.add("inactive");
+      }
+      testimContent[slide].classList.add("active");
+      testimDots[slide].classList.add("active");
+
+      currentActive = currentSlide;
+
+      clearTimeout(testimTimer);
+      testimTimer = setTimeout(function () {
+        playSlide((currentSlide += 1));
+      }, testimSpeed);
+    }
+
+    testimLeftArrow.addEventListener("click", function () {
+      playSlide((currentSlide -= 1));
+    });
+
+    testimRightArrow.addEventListener("click", function () {
+      playSlide((currentSlide += 1));
+    });
+
+    for (var l = 0; l < testimDots.length; l++) {
+      testimDots[l].addEventListener("click", function () {
+        playSlide((currentSlide = testimDots.indexOf(this)));
+      });
+    }
+
+    playSlide(currentSlide);
+
+    // keyboard shortcuts
+    document.addEventListener("keyup", function (e) {
+      switch (e.keyCode) {
+        case 37:
+          testimLeftArrow.click();
+          break;
+
+        case 39:
+          testimRightArrow.click();
+          break;
+
+        case 39:
+          testimRightArrow.click();
+          break;
+
+        default:
+          break;
+      }
+    });
+
+    testim.addEventListener("touchstart", function (e) {
+      touchStartPos = e.changedTouches[0].clientX;
+    });
+
+    testim.addEventListener("touchend", function (e) {
+      touchEndPos = e.changedTouches[0].clientX;
+
+      touchPosDiff = touchStartPos - touchEndPos;
+
+      console.log(touchPosDiff);
+      console.log(touchStartPos);     
+      console.log(touchEndPos);
+
+      if (touchPosDiff > 0 + ignoreTouch) {
+        testimLeftArrow.click();
+      } else if (touchPosDiff < 0 - ignoreTouch) {
+        testimRightArrow.click();
+      } else {
+        return;
+      }
+    });
+  };
+
+</script>
+<script>
+  // vars
+  'use strict'
+  var testim = document.getElementById("testim"),
+    testimDots = Array.prototype.slice.call(document.getElementById("testim-dots").children),
+    testimContent = Array.prototype.slice.call(document.getElementById("testim-content").children),
+    testimLeftArrow = document.getElementById("left-arrow"),
+    testimRightArrow = document.getElementById("right-arrow"),
+    testimSpeed = 4500,
+    currentSlide = 0,
+    currentActive = 0,
+    testimTimer,
+    touchStartPos,
+    touchEndPos,
+    touchPosDiff,
+    ignoreTouch = 30;
+  ;
+
+  window.onload = function () {
+
+    // Testim Script
+    function playSlide(slide) {
+      for (var k = 0; k < testimDots.length; k++) {
+        testimContent[k].classList.remove("active");
+        testimContent[k].classList.remove("inactive");
+        testimDots[k].classList.remove("active");
+      }
+
+      if (slide < 0) {
+        slide = currentSlide = testimContent.length - 1;
+      }
+
+      if (slide > testimContent.length - 1) {
+        slide = currentSlide = 0;
+      }
+
+      if (currentActive != currentSlide) {
+        testimContent[currentActive].classList.add("inactive");
+      }
+      testimContent[slide].classList.add("active");
+      testimDots[slide].classList.add("active");
+
+      currentActive = currentSlide;
+
+      clearTimeout(testimTimer);
+      testimTimer = setTimeout(function () {
+        playSlide(currentSlide += 1);
+      }, testimSpeed)
+    }
+
+    testimLeftArrow.addEventListener("click", function () {
+      playSlide(currentSlide -= 1);
+    })
+
+    testimRightArrow.addEventListener("click", function () {
+      playSlide(currentSlide += 1);
+    })
+
+    for (var l = 0; l < testimDots.length; l++) {
+      testimDots[l].addEventListener("click", function () {
+        playSlide(currentSlide = testimDots.indexOf(this));
+      })
+    }
+
+    playSlide(currentSlide);
+
+    // keyboard shortcuts
+    document.addEventListener("keyup", function (e) {
+      switch (e.keyCode) {
+        case 37:
+          testimLeftArrow.click();
+          break;
+
+        case 39:
+          testimRightArrow.click();
+          break;
+
+        case 39:
+          testimRightArrow.click();
+          break;
+
+        default:
+          break;
+      }
+    })
+
+    testim.addEventListener("touchstart", function (e) {
+      touchStartPos = e.changedTouches[0].clientX;
+    })
+
+    testim.addEventListener("touchend", function (e) {
+      touchEndPos = e.changedTouches[0].clientX;
+
+      touchPosDiff = touchStartPos - touchEndPos;
+
+      console.log(touchPosDiff);
+      console.log(touchStartPos);
+      console.log(touchEndPos);
+
+
+      if (touchPosDiff > 0 + ignoreTouch) {
+        testimLeftArrow.click();
+      } else if (touchPosDiff < 0 - ignoreTouch) {
+        testimRightArrow.click();
+      } else {
+        return;
+      }
+
+    })
+  }
+</script>
+
+</html>

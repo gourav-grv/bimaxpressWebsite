@@ -1,0 +1,75 @@
+.myNav {
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.navLink {
+  text-decoration: none;
+  margin: 9px;
+  color: #000;
+}
+.navLink:hover {
+  color: #fc8c03;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropbtnText {
+  font-weight: bold;
+  color: black;
+}
+.dropbtnText:hover {
+  color: #fc8c03;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content > a {
+  margin: 10px;
+}
+
+.dropdown-content > a.hover {
+  background-color: rgb(245, 182, 182) !important;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2) !important;
+  color: #000 !important;
+}
+
+.bunny:hover {
+  border-left: 2px solid #fc8c03;
+  border-radius: 5px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2) !important;
+  color: #000 !important;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+    
+}
+.dropbtn {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+/* end Dropdawn*/

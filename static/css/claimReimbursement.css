@@ -1,0 +1,128 @@
+body {
+  margin: 0px !important;
+  padding: 0px !important;
+  background: url(../imgs/Path\ -7.png) no-repeat;
+  background-size: 70vh;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+.bootNav {
+  background: transparent !important;
+  padding: 7%;
+  padding-top: 2% !important;
+  padding-bottom: 2% !important;
+  width: 100% !important;
+}
+.Nav {
+  display: flex !important;
+  justify-content: space-between !important;
+  height: 60px !important;
+  margin-top: 20px !important;
+}
+.mainDiv {
+  margin: 0 !important;
+  display: flex !important;
+  padding: 100px !important;
+}
+.upperDiv{
+  background: url(../imgs/Group\ 224.svg) no-repeat bottom left;
+  background-position-x: -15%;
+}
+.heading {
+  font-size: 50px !important;
+  margin-top: 50px;
+  font-weight: bolder;
+}
+.Subheading {
+  font-size: 30px !important;
+  font-weight: bold;
+}
+.imgPath7 {
+  background: url(../imgs/Path\ -1.svg) bottom left no-repeat;
+  background-size: 65vh;
+}
+.left {
+  width: 60%;
+  background: url(../imgs/Ellipse\ -1.svg) no-repeat top left;
+}
+.Right {
+  width: 40%;
+  background: url(../imgs/Ellipse\ -2.svg) no-repeat bottom right;
+  background-size: 17%;
+
+}
+.middleDiv {
+  width: 100% !important;
+  margin: auto !important;
+  background: url(../imgs/Path\ -1.svg) bottom left no-repeat;
+  background-size: 40%;
+  background-position-x: -30% ;
+}
+.imgDiv{
+  display: table;
+  margin: 0 auto;
+}
+.btn {
+  margin-left: 38%;
+  margin-top: -5%;
+  width: 17vh;
+  background: transparent;
+  border: none;
+}
+.btnTwo {
+  margin-left: -40%;
+  margin-top: 15%;
+  width: 17vh;
+  background: transparent;
+  border: none;
+}
+.Line {
+  height: 400px !important ;
+}
+.boldOrange {
+  font-weight: bold;
+  color: #fc8c03;
+}
+.subHeading {
+  font-size: 22px;
+}
+.footer {
+  background-color: black !important;
+  color: rgb(255, 255, 255) !important;
+  margin-top: 50px !important;
+  width: 100% !important;
+  padding: 50px !important;
+  font-weight: bold;
+}
+.footerTop {
+  display: flex !important;
+  justify-content: space-around !important;
+}
+.aboutUs {
+  width: 25% !important;
+}
+.contactUs {
+  width: 25% !important;
+}
+.connectWithUs {
+  width: 30% !important;
+}
+.icons {
+  display: flex !important;
+}
+.icon {
+  margin: 10px;
+}
+.copyRight {
+  text-align: center;
+}
+.footerBottom {
+  margin-top: 50px;
+}
+.footerBottomUnder {
+  color: #fc8c03;
+  display: flex;
+  width: 400px;
+  justify-content: space-around;
+  margin: auto;
+}

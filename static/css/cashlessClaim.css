@@ -1,0 +1,142 @@
+body {
+  margin: 0px !important;
+  padding: 0px !important;
+  overflow-x: hidden !important;
+  background: url(../imgs/Path\ -7.png) no-repeat;
+  background-size: 70vh;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  
+}
+.bootNav {
+  background: transparent !important;
+  padding: 7%;
+  padding-top: 2% !important;
+  padding-bottom: 2% !important;
+  width: 100% !important;
+}
+.mainDiv{
+  margin: 0 !important;
+  display: flex !important;
+  padding: 100px !important;
+}
+.upperDiv{
+  background: url(../imgs/Path\ -1.svg) no-repeat left bottom;
+  background-size: 35%;
+  background-position-x: -20%;
+}
+.heading {
+  font-size: 50px !important;
+  margin-top: 50px;
+}
+.Subheading{
+  font-size: 30px !important;
+  font-weight: bold;
+}
+.imgPath7{
+  background: url(../imgs/Path\ -1.svg) bottom left no-repeat;
+  background-size: 65vh;
+}
+.left{
+  width: 60%; 
+}
+.Right{
+  width: 40%; 
+}
+
+.Line{
+  height: 400px !important ;
+}
+.boldOrange{
+  font-weight: bold;
+  color: #fc8c03;
+}
+.subHeading{
+  font-size: 22px;
+}
+
+.middleDiv{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+}
+.Qleft{
+  width: 50%;
+  padding: 40px;
+}
+.Qright{
+  width: 50%;
+  padding: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.formButton{
+  background-color: #fc8c03;
+  border: none;
+  color: white;
+  padding: 2% 10%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: auto;
+}
+.form{
+  width: 78%;
+  border: 2px solid #fc8c03;
+  border-radius: 20px;
+  padding: 25px;
+  background-color: #f5d7d5;
+}
+.formElement{
+  width: 90%;
+  padding: 3%;
+  outline: none;
+  border: 1px solid #dfd7e0;
+  border-radius: 10px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin: 7px;
+}
+.footer {
+  background-color: black !important;
+  color: rgb(255, 255, 255) !important;
+  margin-top: 50px !important;
+  width: 100% !important;
+  padding: 50px !important;
+}
+.footerTop {
+  display: flex !important;
+  justify-content: space-around !important;
+}
+.aboutUs {
+  width: 25% !important;
+}
+.contactUs {
+  width: 25% !important;
+}
+.connectWithUs {
+  width: 30% !important;
+}
+.icons {
+  display: flex !important;
+}
+.icon {
+  margin: 10px;
+}
+.copyRight {
+  text-align: center;
+}
+.footerBottom {
+  margin-top: 50px;
+}
+.footerBottomUnder {
+  color: #fc8c03;
+  display: flex;
+  width: 400px;
+  justify-content: space-around;
+  margin: auto;
+}

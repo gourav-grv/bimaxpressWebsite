@@ -1,0 +1,60 @@
+{% load static %}
+<link rel="stylesheet" href="{% static '/css/nav.css' %}" />
+<nav class="navbar navbar-expand-lg navbar-light bg-light"
+  style="background: transparent !important; padding: 2em !important; font-weight: bold !important;">
+  <a class="navbar-brand" href="#">
+    <a href="{% url 'home' %}"><img src="../static/imgs/logo.png" class="img-fluid" width="150vw" alt=""
+        srcset="" /></a></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0" style="margin-right: 2em;">
+
+
+      <li class="nav-item" style="list-style-type:none;">
+        <a class="navLink" href="{% url 'home' %}" >Home</a>
+      </li>
+      <div class="dropdown">
+
+
+        <li class="nav-item" style="list-style-type:none;">
+          <a class="navLink" style="cursor: pointer;" class="dropbtnText">Services</a>
+        </li>
+
+        <!-- <button class="dropbtn dropdown-toggle">Dropdown</button> -->
+        <div class="dropdown-content">
+          <a class="bunny" href="{% url 'claimReimbursement' %}" style="text-decoration: none">Claim
+            Reimbursement</a>
+          <a class="bunny" href="{% url 'cashlessClaim' %}" style="text-decoration: none">
+            Claim Desk - Cashless Claims Platform</a>
+        </div>
+      </div>
+      <li class="nav-item" style="list-style-type:none;">
+        <a class="navLink" id="nav-link" href="{% url 'pricing' %}">Pricing</a>
+      </li>
+
+      <li class="nav-item" style="list-style-type:none;">
+        <a class="navLink" href="{% url 'contact' %}" href="">Contact</a>
+      </li>
+
+      <li class="nav-item" style="list-style-type:none;">
+       <a href="https://www.claimdesk.bimaxpress.com" target="_blank">
+        <button type="button"  class="btn btn-warning" width="1em;" style="border-radius: 10px; background-color: orange;" value="App Demo">
+          Login
+        </button>
+      </a>
+      </li>
+
+
+      {% comment %} <li class="nav-item" style="list-style-type:none;">
+        <a class="navLink" href="{% url 'covid' %}">Covid</a>
+      </li> {% endcomment %}
+    </form>
+  </div>
+</nav>
