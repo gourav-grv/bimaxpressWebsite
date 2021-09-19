@@ -134,6 +134,7 @@
 
             <div style="width: 14em;">
                 <span>Upload Ratelist</span>
+
                 <input type="file" id="upload" class="form-control upload" onchange="uploadDoc('{{key}}','{{email}}')"
                     name="upload" placeholder="Fill">
             </div>
@@ -214,14 +215,16 @@
 
     <script>
         var firebaseConfig = {
-            apiKey: "AIzaSyDlZMu8lypZDEhRpMVKlD3JcTuvItFaG2A",
-            authDomain: "bimaxpress-cashless.firebaseapp.com",
-            projectId: "bimaxpress-cashless",
-            storageBucket: "bimaxpress-cashless.appspot.com",
-            messagingSenderId: "577257002368",
-            appId: "1:577257002368:web:489252768c47b398465d65",
-            measurementId: "G-Y8B68GW5YX"
+              apiKey: "AIzaSyCnA7YwYCbM73DbShucsEp6sVMRCr7Kl20",
+              authDomain: "bimaxpressgrv.firebaseapp.com",
+              databaseURL: "https://bimaxpressgrv-default-rtdb.firebaseio.com",
+              projectId: "bimaxpressgrv",
+              storageBucket: "bimaxpressgrv.appspot.com",
+              messagingSenderId: "725727864773",
+              appId: "1:725727864773:web:10111916009851ceebcdac",
+              measurementId: "G-BT8ZJ4PPQJ"
         };
+        
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         var db = firebase.firestore()

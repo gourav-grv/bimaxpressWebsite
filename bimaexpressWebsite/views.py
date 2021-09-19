@@ -321,24 +321,21 @@ def savedoctorcreation(request):
                     'qualification' : data.get('doctor_qualification',""),
                     'speciality' : data.get('doctor_specialization',""),
                     'doctorRegistrationNo' : data.get('doctor_registration',""),
+                    'hospitals': firestore.ArrayUnion([request.session['hospital_email']])
                 })
                 
-             
-                db.collection(u'backend_users').document(f'{email}').update({"hospitals": firestore.ArrayUnion([request.session['hospital_email']])})
-                 
-            except : 
+            except :
                 db.collection(u'backend_users').document(f'{email}').update({"hospitals": firestore.ArrayUnion([request.session['hospital_email']])})
                 return render(request, 'userDetails.html')
             
             return redirect('userDetails')
         else:
-            print("upr wala")
             return redirect('afterPricehospitalDetail')
     except:
         print("nihe wal")
         db.collection(u'backend_users').document(email).update({"hospitals": firestore.ArrayUnion([request.session['hospital_email']])})
         return redirect('afterPricehospitalDetail')
-
+        
 def empanelled_companies(request):
     return render(request, 'empanelled_companies.html')
     
